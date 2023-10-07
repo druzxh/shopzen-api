@@ -1,10 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const ApiController = require("../controller/ApiController");
-const users = require("../seeds/fakeUsers");
+const UserController = require("../controller/Api/UserController");
 
 router.get("/", (req, res) => {
-    ApiController.sendResponse(res, 1, "Data retrivied successfully", users, 200);
+    UserController.getMany(req, res);
 });
 
 module.exports = router;

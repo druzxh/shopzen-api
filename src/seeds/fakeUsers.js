@@ -1,10 +1,11 @@
-const moment = require("moment")
-const users = [
-    {name: "John", users_code: "USERS12345678", user_type: "member", email: "John@gmail.com", email_verified_at: "", is_active: 1, created_at: moment().format('YYYY-MM-DD, hh:mm:ss'), updated_at: moment().format('YYYY-MM-DD, hh:mm:ss'), is_delete: 0},
-    {name: "Jane", users_code: "USERS22345678", user_type: "member", email: "Jane@gmail.com", email_verified_at: "", is_active: 1, created_at: moment().format('YYYY-MM-DD, hh:mm:ss'), updated_at: moment().format('YYYY-MM-DD, hh:mm:ss'), is_delete: 0},
-    {name: "Gill", users_code: "USERS32345678", user_type: "member", email: "Gill@gmail.com", email_verified_at: "", is_active: 1, created_at: moment().format('YYYY-MM-DD, hh:mm:ss'), updated_at: moment().format('YYYY-MM-DD, hh:mm:ss'), is_delete: 0},
-    {name: "Bram", users_code: "USERS42345678", user_type: "seller", email: "Bram@gmail.com", email_verified_at: "", is_active: 1, created_at: moment().format('YYYY-MM-DD, hh:mm:ss'), updated_at: moment().format('YYYY-MM-DD, hh:mm:ss'), is_delete: 0, seller_verified: 1},
-    {name: "Lucas", users_code: "USERS52345678", user_type: "seller", email: "Lucas@gmail.com", email_verified_at: "", is_active: 1, created_at: moment().format('YYYY-MM-DD, hh:mm:ss'), updated_at: moment().format('YYYY-MM-DD, hh:mm:ss'), is_delete: 0, seller_verified: 0}
+const { generateCode } = require("../helpers")
+
+const fakeUsers = [
+    { name: "John", usersCode: generateCode("USR"), userType: "member", email: "John@gmail.com", emailVerifiedAt: "", isActive: 1, isDelete: 0 },
+    { name: "Mark", usersCode: generateCode("USR"), userType: "member", email: "Jane@gmail.com", emailVerifiedAt: "", isActive: 1, isDelete: 0 },
+    { name: "Gill", usersCode: generateCode("USR"), userType: "member", email: "Gill@gmail.com", emailVerifiedAt: "", isActive: 1, isDelete: 0 },
+    { name: "Bram", usersCode: generateCode("USR"), userType: "seller", email: "Bram@gmail.com", emailVerifiedAt: "", isActive: 1, isDelete: 0, sellerVerified: 1 },
+    { name: "Lucas", usersCode: generateCode("USR"), userType: "seller", email: "Lucas@gmail.com", emailVerifiedAt: "", isActive: 1, isDelete: 0, sellerVerified: 0 }
 ]
 
-module.exports = users;
+module.exports = fakeUsers;
